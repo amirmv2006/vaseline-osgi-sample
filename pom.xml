@@ -17,6 +17,8 @@
     <modules>
         <module>ir.amv.os.vaseline.samples.books.model</module>
         <module>ir.amv.os.vaseline.samples.books.feature</module>
+        <module>ir.amv.os.vaseline.samples.books.dao.api</module>
+        <module>ir.amv.os.vaseline.samples.books.dao.jpa</module>
     </modules>
 
     <properties>

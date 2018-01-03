@@ -33,8 +33,34 @@
     <name>ir.amv.os.vaseline.samples.books.feature-feature</name>
     <description>ir.amv.os.vaseline.samples.books.feature details</description>
 
+    <properties>
+        <pax-exam-junit4.version>4.11.0</pax-exam-junit4.version>
+    </properties>
+
     <dependencies>
         <!-- add the artifact that should be in the feature in the dependencies set -->
+        <!-- pax exam -->
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam-container-karaf</artifactId>
+            <version>${pax-exam-junit4.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam-junit4</artifactId>
+            <version>${pax-exam-junit4.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf</groupId>
+            <artifactId>apache-karaf</artifactId>
+            <version>4.1.2</version>
+            <type>zip</type>
+        </dependency>
     </dependencies>
 
     <build>
