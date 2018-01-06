@@ -5,6 +5,8 @@ package ir.amv.os.vaseline.samples.books.model.server;
 
 import ir.amv.os.vaseline.basics.apis.dao.server.ent.BaseEntityImpl;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -16,6 +18,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "SMP_AUTHOR")
+@Access(AccessType.FIELD)
 public class AuthorEntity extends BaseEntityImpl<Long> {
 
     @Column(unique = true)

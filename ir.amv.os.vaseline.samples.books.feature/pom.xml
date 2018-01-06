@@ -32,7 +32,6 @@
 
     <name>ir.amv.os.vaseline.samples.books.feature-feature</name>
     <description>ir.amv.os.vaseline.samples.books.feature details</description>
-
     <properties>
         <pax-exam-junit4.version>4.11.0</pax-exam-junit4.version>
     </properties>
@@ -44,22 +43,19 @@
             <groupId>org.ops4j.pax.exam</groupId>
             <artifactId>pax-exam-container-karaf</artifactId>
             <version>${pax-exam-junit4.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
             <version>1</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.exam</groupId>
             <artifactId>pax-exam-junit4</artifactId>
             <version>${pax-exam-junit4.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.karaf</groupId>
-            <artifactId>apache-karaf</artifactId>
-            <version>4.1.2</version>
-            <type>zip</type>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -69,7 +65,7 @@
                 <plugin>
                     <groupId>org.apache.karaf.tooling</groupId>
                     <artifactId>karaf-maven-plugin</artifactId>
-                    <version>4.1.2</version>
+                    <version>${karaf.version}</version>
                     <extensions>true</extensions>
                 </plugin>
             </plugins>
@@ -78,23 +74,18 @@
             <plugin>
                 <groupId>org.apache.karaf.tooling</groupId>
                 <artifactId>karaf-maven-plugin</artifactId>
-                <version>4.1.2</version>
+                <version>${karaf.version}</version>
                 <extensions>true</extensions>
 
                 <configuration>
-                    <startLevel>50</startLevel>
-                    <aggregateFeatures>true</aggregateFeatures>
-                    <checkDependencyChange>true</checkDependencyChange>
-                    <failOnDependencyChange>false</failOnDependencyChange>
-                    <logDependencyChanges>true</logDependencyChanges>
-                    <overwriteChangedDependencies>true</overwriteChangedDependencies>
-
                     <!-- run karaf -->
+                    <karafDistribution>mvn:org.apache.karaf/apache-karaf/${karaf.version}/zip</karafDistribution>
                     <featureRepositories>
                         <featureRepository>mvn:${project.groupId}/${project.artifactId}/${project.version}/xml/features</featureRepository>
                     </featureRepositories>
-                    <featuresToInstall>webconsole,aries-blueprint,aries-blueprint-annotation-feature,
-                        ${project.artifactId}</featuresToInstall>
+                    <featuresToInstall>
+                        webconsole,aries-blueprint-annotation-feature,${project.artifactId}
+                    </featuresToInstall>
                     <deployProjectArtifact>false</deployProjectArtifact>
                     <keepRunning>true</keepRunning>
                 </configuration>

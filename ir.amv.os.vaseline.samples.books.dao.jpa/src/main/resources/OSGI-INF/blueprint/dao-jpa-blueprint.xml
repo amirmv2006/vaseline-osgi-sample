@@ -22,11 +22,10 @@
 
     <jpa:enable />
 
-    <bean id="testDaoJPA" class="ir.amv.os.vaseline.samples.books.dao.jpa.BookDaoImpl">
-        <!--<jpa:unit property="emf" unitname="amvPersistenceUnit" />-->
+    <bean id="bookDaoImpl" class="ir.amv.os.vaseline.samples.books.dao.jpa.BookDaoImpl">
     </bean>
 
-    <service id="testDaoJPAService" ref="testDaoJPA" interface="ir.amv.os.vaseline.samples.books.dao.jpa.AuthorDaoImpl">
+    <service id="bookDao" ref="bookDaoImpl" interface="ir.amv.os.vaseline.samples.books.dao.api.IBookDao">
     </service>
 
 </blueprint>

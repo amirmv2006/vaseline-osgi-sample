@@ -19,17 +19,19 @@
         <module>ir.amv.os.vaseline.samples.books.feature</module>
         <module>ir.amv.os.vaseline.samples.books.dao.api</module>
         <module>ir.amv.os.vaseline.samples.books.dao.jpa</module>
+        <module>ir.amv.os.vaseline.depholder</module>
     </modules>
 
     <properties>
         <vaseline.version>1.0-SNAPSHOT</vaseline.version>
+        <karaf.version>4.1.2</karaf.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.karaf.tooling</groupId>
             <artifactId>karaf-maven-plugin</artifactId>
-            <version>4.1.2</version>
+            <version>${karaf.version}</version>
         </dependency>
         <dependency>
             <groupId>com.github.amirmv2006.basics.osgi</groupId>
@@ -57,6 +59,12 @@
             <groupId>org.ops4j.pax.logging</groupId>
             <artifactId>pax-logging-service</artifactId>
             <version>1.10.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.webconsole -->
+        <dependency>
+            <groupId>org.apache.karaf.webconsole</groupId>
+            <artifactId>org.apache.karaf.webconsole.console</artifactId>
+            <version>4.1.2</version>
         </dependency>
     </dependencies>
 

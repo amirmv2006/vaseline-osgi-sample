@@ -17,7 +17,8 @@
     limitations under the License.
 -->
 <features name="${project.artifactId}-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
-    <repository>mvn:ir.amv.enterprise.osgi/aries-blueprint-annotation-feature/${project.version}/xml/features</repository>
+    <repository>mvn:org.apache.karaf.features/standard/${karaf.version}/xml/features</repository>
+    <repository>mvn:ir.amv.enterprise.osgi/aries-blueprint-annotation-feature/1.0-SNAPSHOT/xml/features</repository>
     <repository>mvn:org.apache.aries.jpa/jpa-features/2.6.1/xml/features</repository>
     <repository>mvn:org.ops4j.pax.jdbc/pax-jdbc-features/1.2.1/xml/features</repository>
     <repository>mvn:com.github.amirmv2006.basics.osgi/vaseline-basics-karaf-feature/${vaseline.version}/xml/features</repository>
@@ -25,8 +26,7 @@
 
     <feature name='${project.artifactId}' description='${project.name}' version='${project.version}'>
         <details>${project.description}</details>
-        <config name="ir.amv.os.vaseline.samples.books.db">
-            osgi.jdbc.driver.name=H2 JDBC Driver
+        <config name="org.ops4j.datasource-testDBBluepring">osgi.jdbc.driver.name=H2
             pool=aries
             xa=true
             aries.xa.exceptionSorter=none
@@ -48,6 +48,7 @@
         <bundle>mvn:org.apache.geronimo.specs/geronimo-jpa_2.1_spec/1.0-alpha-1</bundle>
         <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.books.model/${project.version}</bundle>
         <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.books.dao.api/${project.version}</bundle>
+        <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.books.dao.jpa/${project.version}</bundle>
 
     </feature>
 </features>

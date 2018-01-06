@@ -5,6 +5,8 @@ package ir.amv.os.vaseline.samples.books.model.server;
 
 import ir.amv.os.vaseline.basics.apis.dao.server.ent.BaseEntityImpl;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -16,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SMP_BOOK")
+@Access(AccessType.FIELD)
 public class BookEntity extends BaseEntityImpl<Long> {
 
     @Column(unique = true)
