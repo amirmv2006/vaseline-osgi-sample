@@ -5,14 +5,23 @@ package ir.amv.os.vaseline.samples.books.dao.jpa;
 
 import ir.amv.os.vaseline.data.jpa.apis.dao.server.crud.IBaseImplementedJpaCrudDao;
 import ir.amv.os.vaseline.data.jpa.apis.dao.server.ro.vendorspecific.IVendorSpecificDaoHelper;
+import ir.amv.os.vaseline.samples.books.dao.api.IAuthorDao;
 import ir.amv.os.vaseline.samples.books.model.server.AuthorEntity;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
 
 import javax.persistence.EntityManager;
 
 /**
  * @author Amir
  */
-public class AuthorDaoImpl implements IBaseImplementedJpaCrudDao<AuthorEntity, Long> {
+@Component(
+        immediate = true,
+        service = IAuthorDao.class
+)
+public class AuthorDaoImpl implements IAuthorDao, IBaseImplementedJpaCrudDao<AuthorEntity, Long> {
+
+    private EntityManager em;
 
     public IVendorSpecificDaoHelper getVendorSpecificDaoHelper() {
         return null;
@@ -28,5 +37,12 @@ public class AuthorDaoImpl implements IBaseImplementedJpaCrudDao<AuthorEntity, L
 
     public EntityManager getEntityManager() {
         return null;
+    }
+
+    @Reference(
+            target = "(osgi.unit.name=amvPersistenceUnit)"
+    )
+    public void setEm(final EntityManager em) {
+        this.em = em;
     }
 }
