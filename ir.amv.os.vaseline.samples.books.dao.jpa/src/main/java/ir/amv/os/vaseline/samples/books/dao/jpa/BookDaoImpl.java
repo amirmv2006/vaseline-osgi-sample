@@ -2,8 +2,10 @@ package ir.amv.os.vaseline.samples.books.dao.jpa;
 
 import ir.amv.os.vaseline.data.jpa.apis.dao.server.crud.IBaseImplementedJpaCrudDao;
 import ir.amv.os.vaseline.data.jpa.apis.dao.server.ro.vendorspecific.IVendorSpecificDaoHelper;
+import ir.amv.os.vaseline.data.jpa.apis.simplesearch.server.dao.IBaseImplementedJpaSimpleSearchDao;
 import ir.amv.os.vaseline.samples.books.dao.api.IBookDao;
 import ir.amv.os.vaseline.samples.books.model.server.BookEntity;
+import ir.amv.os.vaseline.samples.books.model.shared.BookDto;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
@@ -16,7 +18,8 @@ import javax.persistence.EntityManager;
         immediate = true,
         service = IBookDao.class
 )
-public class BookDaoImpl implements IBookDao, IBaseImplementedJpaCrudDao<BookEntity, Long> {
+public class BookDaoImpl implements IBookDao, IBaseImplementedJpaCrudDao<BookEntity, Long>,
+        IBaseImplementedJpaSimpleSearchDao<BookEntity, BookDto, Long> {
 
 //    @PersistenceContext(unitName = "amvPersistenceUnit")
     @Reference(

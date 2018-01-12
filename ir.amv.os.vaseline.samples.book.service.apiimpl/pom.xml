@@ -9,18 +9,23 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ir.amv.os.vaseline.samples.books.dao.api</artifactId>
+    <artifactId>ir.amv.os.vaseline.samples.book.service.apiimpl</artifactId>
     <packaging>bundle</packaging>
 
     <dependencies>
         <dependency>
             <groupId>ir.amv.os.vaseline.samples</groupId>
-            <artifactId>ir.amv.os.vaseline.samples.books.model</artifactId>
+            <artifactId>ir.amv.os.vaseline.samples.book.service.api</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.github.amirmv2006.data.apis</groupId>
-            <artifactId>vaseline-simple-search-dao-api</artifactId>
+            <groupId>ir.amv.os.vaseline.samples</groupId>
+            <artifactId>ir.amv.os.vaseline.samples.book.business.api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.amirmv2006.service.apis</groupId>
+            <artifactId>vaseline-service-simple-search-layerimpl-api</artifactId>
             <version>${vaseline.version}</version>
         </dependency>
     </dependencies>

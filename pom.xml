@@ -20,6 +20,10 @@
         <module>ir.amv.os.vaseline.samples.books.dao.api</module>
         <module>ir.amv.os.vaseline.samples.books.dao.jpa</module>
         <module>ir.amv.os.vaseline.depholder</module>
+        <module>ir.amv.os.vaseline.samples.book.business.api</module>
+        <module>ir.amv.os.vaseline.samples.book.business.apiimpl</module>
+        <module>ir.amv.os.vaseline.samples.book.service.api</module>
+        <module>ir.amv.os.vaseline.samples.book.service.apiimpl</module>
     </modules>
 
     <properties>
@@ -67,6 +71,20 @@
             <version>4.1.2</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <inherited>true</inherited>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <distributionManagement>
         <repository>
