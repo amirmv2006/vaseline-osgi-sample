@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>bundle-parent</artifactId>
-        <groupId>ir.amv.enterprise.osgi</groupId>
+        <artifactId>vaseline-bundle-parent</artifactId>
+        <groupId>com.github.amirmv2006.commonosgi.bundles</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
