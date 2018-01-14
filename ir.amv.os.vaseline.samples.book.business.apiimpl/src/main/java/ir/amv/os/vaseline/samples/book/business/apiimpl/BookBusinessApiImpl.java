@@ -25,7 +25,6 @@ public class BookBusinessApiImpl
         IBaseImplementedCrudApi<BookEntity, Long, IBookDao>,
         IBaseImplementedSimpleSearchApi<BookEntity, BookDto, Long, IBookDao> {
 
-    @Reference
     private IBookDao bookDao;
 
     public IBookDao getDao() {
@@ -38,5 +37,10 @@ public class BookBusinessApiImpl
 
     public <Proxy> void setProxy(final Proxy proxy) {
 
+    }
+
+    @Reference
+    public void setBookDao(final IBookDao bookDao) {
+        this.bookDao = bookDao;
     }
 }

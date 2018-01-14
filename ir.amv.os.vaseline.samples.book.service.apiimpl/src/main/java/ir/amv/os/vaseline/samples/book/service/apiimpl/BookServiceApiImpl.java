@@ -28,13 +28,9 @@ public class BookServiceApiImpl
         IBaseImplementedSimpleSearchService<BookEntity, BookDto,Long, IBookBusinessApi>,
         IBaseImplementedCrudService<BookEntity, BookDto, Long, IBookBusinessApi>{
 
-    @Reference
     private IBookBusinessApi bookBusinessApi;
-    @Reference
     private IVaselineObjectMapper mapper;
-    @Reference
     private Validator validator;
-    @Reference
     private ICoreExceptionHandler coreExceptionHandler;
 
     @Override
@@ -55,5 +51,25 @@ public class BookServiceApiImpl
     @Override
     public ICoreExceptionHandler getCoreExceptionHandler() {
         return coreExceptionHandler;
+    }
+
+    @Reference
+    public void setBookBusinessApi(final IBookBusinessApi bookBusinessApi) {
+        this.bookBusinessApi = bookBusinessApi;
+    }
+
+    @Reference
+    public void setCoreExceptionHandler(final ICoreExceptionHandler coreExceptionHandler) {
+        this.coreExceptionHandler = coreExceptionHandler;
+    }
+
+    @Reference
+    public void setMapper(final IVaselineObjectMapper mapper) {
+        this.mapper = mapper;
+    }
+
+    @Reference
+    public void setValidator(final Validator validator) {
+        this.validator = validator;
     }
 }

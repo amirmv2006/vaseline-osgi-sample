@@ -24,7 +24,6 @@ public class AuthorBusinessApiImpl implements
         IBaseImplementedCrudApi<AuthorEntity, Long, IAuthorDao>,
         IBaseImplementedSimpleSearchApi<AuthorEntity, AuthorDto, Long, IAuthorDao>{
 
-    @Reference
     private IAuthorDao authorDao;
 
     public IAuthorDao getDao() {
@@ -37,5 +36,10 @@ public class AuthorBusinessApiImpl implements
 
     public <Proxy> void setProxy(final Proxy proxy) {
 
+    }
+
+    @Reference
+    public void setAuthorDao(final IAuthorDao authorDao) {
+        this.authorDao = authorDao;
     }
 }

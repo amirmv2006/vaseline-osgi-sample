@@ -22,9 +22,6 @@ public class BookDaoImpl implements IBookDao, IBaseImplementedJpaCrudDao<BookEnt
         IBaseImplementedJpaSimpleSearchDao<BookEntity, BookDto, Long> {
 
 //    @PersistenceContext(unitName = "amvPersistenceUnit")
-    @Reference(
-            target = "(osgi.unit.name=amvPersistenceUnit)"
-    )
     private EntityManager em;
 
     @Override
@@ -44,5 +41,12 @@ public class BookDaoImpl implements IBookDao, IBaseImplementedJpaCrudDao<BookEnt
     @Override
     public EntityManager getEntityManager() {
         return em;
+    }
+
+    @Reference(
+            target = "(osgi.unit.name=amvPersistenceUnit)"
+    )
+    public void setEm(final EntityManager em) {
+        this.em = em;
     }
 }

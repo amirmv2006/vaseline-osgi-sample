@@ -27,13 +27,9 @@ public class AuthorServiceApiImpl
         implements IAuthorServiceApi,
         IBaseImplementedSimpleSearchService<AuthorEntity, AuthorDto, Long, IAuthorBusinessApi>,
         IBaseImplementedCrudService<AuthorEntity, AuthorDto, Long, IAuthorBusinessApi> {
-    @Reference
     private IAuthorBusinessApi authorBusinessApi;
-    @Reference
     private IVaselineObjectMapper mapper;
-    @Reference
     private Validator validator;
-    @Reference
     private ICoreExceptionHandler coreExceptionHandler;
 
     @Override
@@ -54,5 +50,25 @@ public class AuthorServiceApiImpl
     @Override
     public ICoreExceptionHandler getCoreExceptionHandler() {
         return coreExceptionHandler;
+    }
+
+    @Reference
+    public void setValidator(final Validator validator) {
+        this.validator = validator;
+    }
+
+    @Reference
+    public void setMapper(final IVaselineObjectMapper mapper) {
+        this.mapper = mapper;
+    }
+
+    @Reference
+    public void setCoreExceptionHandler(final ICoreExceptionHandler coreExceptionHandler) {
+        this.coreExceptionHandler = coreExceptionHandler;
+    }
+
+    @Reference
+    public void setAuthorBusinessApi(final IAuthorBusinessApi authorBusinessApi) {
+        this.authorBusinessApi = authorBusinessApi;
     }
 }

@@ -26,9 +26,6 @@ public class AuthorDaoImpl implements
         IBaseImplementedJpaCrudDao<AuthorEntity, Long>,
         IBaseImplementedJpaSimpleSearchDao<AuthorEntity, AuthorDto, Long> {
 
-    @Reference(
-            target = "(osgi.unit.name=amvPersistenceUnit)"
-    )
     private EntityManager em;
 
     public IVendorSpecificDaoHelper getVendorSpecificDaoHelper() {
@@ -47,4 +44,10 @@ public class AuthorDaoImpl implements
         return em;
     }
 
+    @Reference(
+            target = "(osgi.unit.name=amvPersistenceUnit)"
+    )
+    public void setEm(final EntityManager em) {
+        this.em = em;
+    }
 }

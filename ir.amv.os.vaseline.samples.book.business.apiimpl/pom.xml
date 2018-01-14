@@ -28,6 +28,10 @@
             <artifactId>vaseline-business-simple-search-layerimpl-api</artifactId>
             <version>${vaseline.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

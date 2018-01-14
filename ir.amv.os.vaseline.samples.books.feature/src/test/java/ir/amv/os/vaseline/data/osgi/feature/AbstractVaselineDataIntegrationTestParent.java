@@ -30,7 +30,7 @@ import static org.ops4j.pax.exam.karaf.options.KarafDistributionOption.logLevel;
  */
 @RunWith(PaxExam.class)
 @ExamReactorStrategy(PerClass.class)
-public class AbstractVaselineDataIntegrationTest {
+public class AbstractVaselineDataIntegrationTestParent {
 
     @Inject
     protected BundleContext bundleContext;
@@ -66,7 +66,7 @@ public class AbstractVaselineDataIntegrationTest {
                 .type("xml");
         File unpackDirectory = new File("target", "exam");
         return new Option[]{
-                // KarafDistributionOption.debugConfiguration("5005", true),
+                debugConfiguration("5005", true),
                 karafDistributionConfiguration()
                         .frameworkUrl(karafUrl)
                         .unpackDirectory(unpackDirectory)
@@ -84,21 +84,21 @@ public class AbstractVaselineDataIntegrationTest {
                         .version("1.0-SNAPSHOT")
                         .start(),
                 features(karafStandardRepo, getTestFeatures()),
-                logLevel(LogLevelOption.LogLevel.INFO),
-                debugConfiguration("5555", false)
+                logLevel(LogLevelOption.LogLevel.INFO)
         };
     }
 
     protected String getFeaturesVersion() {
-        return System.getProperty("vasline.data.features.version", "1.0-SNAPSHOT");
+        return System.getProperty("vasline.feature.under.test.version", "1.0-SNAPSHOT");
     }
 
     protected String getFeaturesArtifactId() {
-        return System.getProperty("vasline.data.features.artifactId", "ir.amv.os.vaseline.samples.books.feature");
+        return System.getProperty("vasline.feature.under.test.artifactId", "ir.amv.os.vaseline.samples.books" +
+                ".feature");
     }
 
     protected String getFeaturesGroupId() {
-        return System.getProperty("vasline.data.features.groupId", "ir.amv.os.vaseline.samples");
+        return System.getProperty("vasline.feature.under.test.groupId", "ir.amv.os.vaseline.samples");
     }
 
     protected String getKarafVersion() {
