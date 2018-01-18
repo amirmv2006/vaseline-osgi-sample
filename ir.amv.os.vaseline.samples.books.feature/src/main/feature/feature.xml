@@ -22,6 +22,8 @@
     <repository>mvn:com.github.amirmv2006.data.osgi/vaseline-data-karaf-feature/${vaseline.version}/xml/features</repository>
     <repository>mvn:com.github.amirmv2006.business.osgi/vaseline-business-karaf-feature/${vaseline.version}/xml/features</repository>
     <repository>mvn:com.github.amirmv2006.service.osgi/vaseline-service-karaf-feature/${vaseline.version}/xml/features</repository>
+    <repository>mvn:com.github.amirmv2006.ws.osgi/vaseline-ws-rest-karaf-feature/${vaseline.version}/xml/features</repository>
+
 
     <feature name='${project.artifactId}' description='${project.name}' version='${project.version}'>
         <details>${project.description}</details>
@@ -44,6 +46,7 @@
         <feature>vaseline-data-karaf-feature-jpa</feature>
         <feature>vaseline-business-karaf-feature</feature>
         <feature>vaseline-service-karaf-feature</feature>
+        <feature>vaseline-ws-rest-karaf-feature</feature>
 
         <bundle>mvn:org.apache.geronimo.specs/geronimo-jpa_2.1_spec/1.0-alpha-1</bundle>
         <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.books.model/${project.version}</bundle>
@@ -53,6 +56,7 @@
         <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.business.apiimpl/${project.version}</bundle>
         <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.service.api/${project.version}</bundle>
         <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.service.apiimpl/${project.version}</bundle>
+        <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.rest/${project.version}</bundle>
 
     </feature>
 </features>

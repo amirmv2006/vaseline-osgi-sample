@@ -16,7 +16,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>ir.amv.os.vaseline.samples.books.model</module>
-        <module>ir.amv.os.vaseline.samples.books.feature</module>
         <module>ir.amv.os.vaseline.samples.books.dao.api</module>
         <module>ir.amv.os.vaseline.samples.books.dao.jpa</module>
         <module>ir.amv.os.vaseline.depholder</module>
@@ -24,6 +23,9 @@
         <module>ir.amv.os.vaseline.samples.book.business.apiimpl</module>
         <module>ir.amv.os.vaseline.samples.book.service.api</module>
         <module>ir.amv.os.vaseline.samples.book.service.apiimpl</module>
+        <module>ir.amv.os.vaseline.samples.book.rest</module>
+
+        <module>ir.amv.os.vaseline.samples.books.feature</module>
         <module>ir.amv.os.vaseline.samples.book.karaf-assmbly</module>
     </modules>
 
