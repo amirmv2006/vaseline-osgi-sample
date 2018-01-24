@@ -57,6 +57,7 @@
         <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.service.api/${project.version}</bundle>
         <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.service.apiimpl/${project.version}</bundle>
         <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.rest/${project.version}</bundle>
+        <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.restimpl/${project.version}</bundle>
 
     </feature>
 </features>

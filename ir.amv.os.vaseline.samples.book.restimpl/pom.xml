@@ -9,37 +9,23 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ir.amv.os.vaseline.samples.book.rest</artifactId>
+    <artifactId>ir.amv.os.vaseline.samples.book.restimpl</artifactId>
     <packaging>bundle</packaging>
-
-    <properties>
-        <jax-rs-consumer.version>5.3</jax-rs-consumer.version>
-    </properties>
 
     <dependencies>
         <dependency>
             <groupId>ir.amv.os.vaseline.samples</groupId>
-            <artifactId>ir.amv.os.vaseline.samples.books.model</artifactId>
+            <artifactId>ir.amv.os.vaseline.samples.book.rest</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.eclipsesource.jaxrs</groupId>
-            <artifactId>consumer</artifactId>
-            <version>${jax-rs-consumer.version}</version>
+            <groupId>com.github.amirmv2006.ws.rest.api</groupId>
+            <artifactId>vaseline-ws-rest-simple-search-layerimpl-api</artifactId>
+            <version>${vaseline.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.compendium</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.amirmv2006.ws.rest.api</groupId>
-            <artifactId>vaseline-ws-rest-simple-search-layer-api</artifactId>
-            <version>${vaseline.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ir.amv.os.vaseline.samples</groupId>
-            <artifactId>ir.amv.os.vaseline.samples.book.service.api</artifactId>
-            <version>${project.version}</version>
         </dependency>
     </dependencies>
 
