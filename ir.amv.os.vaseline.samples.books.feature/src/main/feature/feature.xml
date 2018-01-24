@@ -27,7 +27,7 @@
 
     <feature name='${project.artifactId}' description='${project.name}' version='${project.version}'>
         <details>${project.description}</details>
-        <config name="org.ops4j.datasource-testDBBluepring">osgi.jdbc.driver.name=H2
+        <config name="org.ops4j.datasource-testDBBluepring">osgi.jdbc.driver.name=H2 JDBC Driver
             pool=aries
             xa=true
             aries.xa.exceptionSorter=none
@@ -36,7 +36,7 @@
             databaseName=./amirdb;create=true
         </config>
         <feature>jpa</feature>
-        <feature>pax-jdbc-h2</feature>
+        <bundle>mvn:com.h2database/h2/1.4.196</bundle>
         <feature>pax-jdbc</feature>
         <feature>pax-jdbc-config</feature>
         <feature>pax-jdbc-pool-aries</feature>

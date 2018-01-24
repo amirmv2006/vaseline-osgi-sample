@@ -3,6 +3,7 @@
  */
 package ir.amv.os.vaseline.samples.book.business.apiimpl;
 
+import ir.amv.os.vaseline.business.apis.basic.layer.server.action.executor.IVaselineBusinessActionExecutor;
 import ir.amv.os.vaseline.business.apis.basic.layerimpl.server.crud.IBaseImplementedCrudApi;
 import ir.amv.os.vaseline.business.apis.simplesearch.layerimpl.server.IBaseImplementedSimpleSearchApi;
 import ir.amv.os.vaseline.samples.book.business.api.IBookBusinessApi;
@@ -26,6 +27,7 @@ public class BookBusinessApiImpl
         IBaseImplementedSimpleSearchApi<BookEntity, BookDto, Long, IBookDao> {
 
     private IBookDao bookDao;
+    private IVaselineBusinessActionExecutor businessActionExecutor;
 
     public IBookDao getDao() {
         return bookDao;
@@ -39,8 +41,18 @@ public class BookBusinessApiImpl
 
     }
 
+    @Override
+    public IVaselineBusinessActionExecutor getBusinessActionExecutor() {
+        return businessActionExecutor;
+    }
+
     @Reference
     public void setBookDao(final IBookDao bookDao) {
         this.bookDao = bookDao;
+    }
+
+    @Reference
+    public void setBusinessActionExecutor(final IVaselineBusinessActionExecutor businessActionExecutor) {
+        this.businessActionExecutor = businessActionExecutor;
     }
 }
