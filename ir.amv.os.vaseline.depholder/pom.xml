@@ -62,6 +62,11 @@
             <artifactId>h2</artifactId>
             <version>1.4.196</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.amirmv2006.ws.osgi</groupId>
+            <artifactId>vaseline-ws-rest-gson-extension-osgi</artifactId>
+            <version>${vaseline.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
