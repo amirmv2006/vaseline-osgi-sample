@@ -22,6 +22,8 @@
     <repository>mvn:com.github.amirmv2006.data.osgi/vaseline-data-karaf-feature/${vaseline.version}/xml/features</repository>
     <repository>mvn:com.github.amirmv2006.business.osgi/vaseline-business-karaf-feature/${vaseline.version}/xml/features</repository>
     <repository>mvn:com.github.amirmv2006.service.osgi/vaseline-service-karaf-feature/${vaseline.version}/xml/features</repository>
+    <repository>mvn:com.github.amirmv2006.security.audit.osgi/vaseline-security-audit-karaf-feature/${project.version}/xml/features</repository>
+    <repository>mvn:com.github.amirmv2006.security.authentication.osgi/vaseline-security-authentication-karaf-feature/${project.version}/xml/features</repository>
     <repository>mvn:com.github.amirmv2006.ws.osgi/vaseline-ws-rest-karaf-feature/${vaseline.version}/xml/features</repository>
 
 
@@ -41,11 +43,14 @@
         <feature>pax-jdbc-config</feature>
         <feature>pax-jdbc-pool-aries</feature>
         <feature version="${org.hibernate.version}">hibernate-orm</feature><!-- using vaseline data jpa, so have to specify hibernate -->
+        <feature>jax-rs-provider-security</feature>
 
         <feature>vaseline-basics-karaf-feature</feature>
         <feature>vaseline-data-karaf-feature-jpa</feature>
         <feature>vaseline-business-karaf-feature</feature>
+        <feature>vaseline-security-audit-karaf-feature</feature>
         <feature>vaseline-service-karaf-feature</feature>
+        <feature>vaseline-security-authentication-karaf-feature-jpa</feature>
         <feature>vaseline-ws-rest-karaf-feature</feature>
 
         <bundle>mvn:org.apache.geronimo.specs/geronimo-jpa_2.1_spec/1.0-alpha-1</bundle>
