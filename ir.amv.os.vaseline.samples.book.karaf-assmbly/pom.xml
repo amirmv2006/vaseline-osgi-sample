@@ -116,12 +116,12 @@
                 <configuration>
                     <installedFeatures>
                         <feature>wrapper</feature>
-                        <!--<feature>webconsole</feature>-->
                     </installedFeatures>
                     <startupFeatures>
                         <feature>eventadmin</feature>
                         <feature>aries-blueprint</feature>
                         <feature>h2-ds</feature>
+                        <feature>webconsole</feature>
                     </startupFeatures>
                     <bootFeatures>
                         <feature>wrap</feature>
