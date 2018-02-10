@@ -15,6 +15,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <module>ir.amv.os.vaseline.samples.books.ds</module>
         <module>ir.amv.os.vaseline.samples.books.model</module>
         <module>ir.amv.os.vaseline.samples.books.dao.api</module>
         <module>ir.amv.os.vaseline.samples.books.dao.jpa</module>

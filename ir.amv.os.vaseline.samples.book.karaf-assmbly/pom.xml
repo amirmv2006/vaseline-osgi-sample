@@ -55,10 +55,17 @@
         </dependency>
         <dependency>
             <groupId>ir.amv.os.vaseline.samples</groupId>
-            <artifactId>ir.amv.os.vaseline.samples.books.feature</artifactId>
+            <artifactId>ir.amv.os.vaseline.samples.books.ds</artifactId>
             <version>1.0-SNAPSHOT</version>
             <classifier>features</classifier>
             <type>xml</type>
+        </dependency>
+        <dependency>
+            <groupId>ir.amv.os.vaseline.samples</groupId>
+            <artifactId>ir.amv.os.vaseline.samples.books.feature</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>kar</type>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 
@@ -115,7 +122,6 @@
                         <feature>eventadmin</feature>
                         <feature>aries-blueprint</feature>
                         <feature>h2-ds</feature>
-                        <feature>ir.amv.os.vaseline.samples.books.feature</feature>
                     </startupFeatures>
                     <bootFeatures>
                         <feature>wrap</feature>
