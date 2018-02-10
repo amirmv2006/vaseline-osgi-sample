@@ -21,20 +21,20 @@
 
     <dependencies>
         <!-- add the artifact that should be in the feature in the dependencies set -->
-        <dependency>
-            <groupId>org.ops4j.pax.jdbc</groupId>
-            <artifactId>pax-jdbc-features</artifactId>
-            <version>1.2.1</version>
-            <classifier>features</classifier>
-            <type>xml</type>
-        </dependency>
-        <dependency>
-            <groupId>com.github.amirmv2006.basics.osgi</groupId>
-            <artifactId>vaseline-basics-karaf-feature</artifactId>
-            <version>${parent.version}</version>
-            <classifier>features</classifier>
-            <type>xml</type>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.ops4j.pax.jdbc</groupId>-->
+            <!--<artifactId>pax-jdbc-features</artifactId>-->
+            <!--<version>1.2.1</version>-->
+            <!--<classifier>features</classifier>-->
+            <!--<type>xml</type>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.github.amirmv2006.basics.osgi</groupId>-->
+            <!--<artifactId>vaseline-basics-karaf-feature</artifactId>-->
+            <!--<version>${parent.version}</version>-->
+            <!--<classifier>features</classifier>-->
+            <!--<type>xml</type>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>

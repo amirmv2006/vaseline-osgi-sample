@@ -26,7 +26,6 @@
     <repository>mvn:com.github.amirmv2006.security.authentication.osgi/vaseline-security-authentication-karaf-feature/${project.version}/xml/features</repository>
     <repository>mvn:com.github.amirmv2006.ws.osgi/vaseline-ws-rest-karaf-feature/${vaseline.version}/xml/features</repository>
 
-
     <feature name='${project.artifactId}' description='${project.name}' version='${project.version}'>
         <details>${project.description}</details>
         <config name="org.ops4j.datasource-testDBBluepring">osgi.jdbc.driver.name=H2 JDBC Driver
@@ -43,7 +42,6 @@
         <feature>pax-jdbc-config</feature>
         <feature>pax-jdbc-pool-aries</feature>
         <feature version="${org.hibernate.version}">hibernate-orm</feature><!-- using vaseline data jpa, so have to specify hibernate -->
-        <feature>jax-rs-provider-security</feature>
 
         <feature>vaseline-basics-karaf-feature</feature>
         <feature>vaseline-data-karaf-feature-jpa</feature>

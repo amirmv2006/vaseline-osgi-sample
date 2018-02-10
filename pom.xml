@@ -24,10 +24,10 @@
         <module>ir.amv.os.vaseline.samples.book.service.api</module>
         <module>ir.amv.os.vaseline.samples.book.service.apiimpl</module>
         <module>ir.amv.os.vaseline.samples.book.rest</module>
+        <module>ir.amv.os.vaseline.samples.book.restimpl</module>
 
         <module>ir.amv.os.vaseline.samples.books.feature</module>
         <module>ir.amv.os.vaseline.samples.book.karaf-assmbly</module>
-        <module>ir.amv.os.vaseline.samples.book.restimpl</module>
     </modules>
 
     <dependencyManagement>
