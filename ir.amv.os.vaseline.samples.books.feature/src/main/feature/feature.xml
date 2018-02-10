@@ -26,8 +26,17 @@
     <repository>mvn:com.github.amirmv2006.security.authentication.osgi/vaseline-security-authentication-karaf-feature/${project.version}/xml/features</repository>
     <repository>mvn:com.github.amirmv2006.ws.osgi/vaseline-ws-rest-karaf-feature/${vaseline.version}/xml/features</repository>
 
+    <feature name="h2-ds">
+        <feature>jpa</feature>
+        <bundle>mvn:com.h2database/h2/1.4.196</bundle>
+        <feature>pax-jdbc</feature>
+        <feature>pax-jdbc-config</feature>
+        <feature>pax-jdbc-pool-aries</feature>
+    </feature>
+
     <feature name='${project.artifactId}' description='${project.name}' version='${project.version}'>
         <details>${project.description}</details>
+        <feature>h2-ds</feature>
         <config name="org.ops4j.datasource-testDBBluepring">osgi.jdbc.driver.name=H2 JDBC Driver
             pool=aries
             xa=true
@@ -36,11 +45,7 @@
 
             databaseName=./amirdb;create=true
         </config>
-        <feature>jpa</feature>
-        <bundle>mvn:com.h2database/h2/1.4.196</bundle>
-        <feature>pax-jdbc</feature>
-        <feature>pax-jdbc-config</feature>
-        <feature>pax-jdbc-pool-aries</feature>
+        <feature>transaction</feature>
         <feature version="${org.hibernate.version}">hibernate-orm</feature><!-- using vaseline data jpa, so have to specify hibernate -->
 
         <feature>vaseline-basics-karaf-feature</feature>
