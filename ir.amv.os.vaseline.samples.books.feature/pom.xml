@@ -28,13 +28,13 @@
             <!--<classifier>features</classifier>-->
             <!--<type>xml</type>-->
         <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>com.github.amirmv2006.basics.osgi</groupId>-->
-            <!--<artifactId>vaseline-basics-karaf-feature</artifactId>-->
-            <!--<version>${parent.version}</version>-->
-            <!--<classifier>features</classifier>-->
-            <!--<type>xml</type>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>ir.amv.os.vaseline.samples.books.ds</artifactId>
+            <version>${project.version}</version>
+            <classifier>features</classifier>
+            <type>xml</type>
+        </dependency>
     </dependencies>
 
     <build>
@@ -53,10 +53,11 @@
                     <!-- run karaf -->
                     <karafDistribution>mvn:org.apache.karaf/apache-karaf/${karaf.version}/zip</karafDistribution>
                     <featureRepositories>
+                        <featureRepository>mvn:${project.groupId}/ir.amv.os.vaseline.samples.books.ds/${project.version}/xml/features</featureRepository>
                         <featureRepository>mvn:${project.groupId}/${project.artifactId}/${project.version}/xml/features</featureRepository>
                     </featureRepositories>
                     <featuresToInstall>
-                        webconsole,${project.artifactId}
+                        webconsole,h2-ds,${project.artifactId}
                     </featuresToInstall>
                     <deployProjectArtifact>false</deployProjectArtifact>
                     <keepRunning>true</keepRunning>

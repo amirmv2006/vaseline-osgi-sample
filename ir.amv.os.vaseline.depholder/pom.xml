@@ -67,6 +67,21 @@
             <artifactId>vaseline-ws-rest-gson-extension-osgi</artifactId>
             <version>${vaseline.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.amirmv2006.ws.osgi</groupId>
+            <artifactId>vaseline-ws-rest-secured-osgi</artifactId>
+            <version>${vaseline.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.tooling</groupId>
+            <artifactId>karaf-maven-plugin</artifactId>
+            <version>${karaf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.spring-security-web</artifactId>
+            <version>${org.apache.servicemix.bundles.spring.sec.version}_1</version>
+        </dependency>
     </dependencies>
 
 </project>

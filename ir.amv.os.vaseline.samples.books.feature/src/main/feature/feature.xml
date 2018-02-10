@@ -17,7 +17,6 @@
     limitations under the License.
 -->
 <features name="${project.artifactId}-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
-    <repository>mvn:org.ops4j.pax.jdbc/pax-jdbc-features/1.2.1/xml/features</repository>
     <repository>mvn:com.github.amirmv2006.basics.osgi/vaseline-basics-karaf-feature/${vaseline.version}/xml/features</repository>
     <repository>mvn:com.github.amirmv2006.data.osgi/vaseline-data-karaf-feature/${vaseline.version}/xml/features</repository>
     <repository>mvn:com.github.amirmv2006.business.osgi/vaseline-business-karaf-feature/${vaseline.version}/xml/features</repository>
@@ -28,7 +27,6 @@
 
     <feature name='${project.artifactId}' description='${project.name}' version='${project.version}'>
         <details>${project.description}</details>
-        <feature>h2-ds</feature>
         <feature>pax-jdbc-pool-aries</feature>
         <bundle>mvn:com.h2database/h2/1.4.196</bundle>
         <feature>jpa</feature>
