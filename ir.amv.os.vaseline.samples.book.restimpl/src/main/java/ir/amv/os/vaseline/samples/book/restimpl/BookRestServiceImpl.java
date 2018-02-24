@@ -5,12 +5,12 @@ import ir.amv.os.vaseline.basics.apis.core.shared.base.exc.BaseVaselineClientExc
 import ir.amv.os.vaseline.samples.book.rest.IBookRestService;
 import ir.amv.os.vaseline.samples.book.service.api.IBookServiceApi;
 import ir.amv.os.vaseline.samples.books.model.shared.BookDto;
-import ir.amv.os.vaseline.ws.rest.apis.basic.layer.base.IBaseRestService;
 import ir.amv.os.vaseline.ws.rest.apis.basic.layerimpl.crud.IBaseImplementedCrudRestService;
 import ir.amv.os.vaseline.ws.rest.apis.simplesearch.layerimpl.IBaseImplementedSimpleSearchRestService;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
+import javax.annotation.security.RolesAllowed;
 import java.util.List;
 import java.util.Map;
 
@@ -35,6 +35,12 @@ public class BookRestServiceImpl
     @Reference
     public void setBookService(final IBookServiceApi bookService) {
         this.bookService = bookService;
+    }
+
+    @Override
+    @RolesAllowed("book:read")
+    public List<BookDto> getAll() throws BaseVaselineClientException {
+        return IBaseImplementedSimpleSearchRestService.super.getAll();
     }
 
     @Override

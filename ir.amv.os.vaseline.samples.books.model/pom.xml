@@ -24,6 +24,11 @@
             <version>${vaseline.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.github.amirmv2006.security.authentication.apis</groupId>
+            <artifactId>vaseline-security-authentication-modelimpl-api</artifactId>
+            <version>${vaseline.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>javax.persistence</artifactId>
             <version>2.1.0</version>
@@ -34,6 +39,15 @@
             <artifactId>hibernate-core</artifactId>
             <version>${org.hibernate.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.core</artifactId>
+            <version>6.0.0</version>
         </dependency>
     </dependencies>
 

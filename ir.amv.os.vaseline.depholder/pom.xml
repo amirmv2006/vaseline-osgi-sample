@@ -82,6 +82,31 @@
             <artifactId>org.apache.servicemix.bundles.spring-security-web</artifactId>
             <version>${org.apache.servicemix.bundles.spring.sec.version}_1</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.amirmv2006.security.authentication.osgi</groupId>
+            <artifactId>vaseline-security-authentication-spring-security-osgi</artifactId>
+            <version>${vaseline.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.jdbc</groupId>
+            <artifactId>pax-jdbc-config</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.amirmv2006.basics.osgi</groupId>
+            <artifactId>vaseline-basics-cache-hazelcast-osgi</artifactId>
+            <version>${vaseline.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.amirmv2006.ws.osgi</groupId>
+            <artifactId>vaseline-ws-rest-secured-oauth2-cache-hazelcast-osgi</artifactId>
+            <version>${vaseline.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.configadmin</artifactId>
+            <version>1.8.14</version>
+        </dependency>
     </dependencies>
 
 </project>

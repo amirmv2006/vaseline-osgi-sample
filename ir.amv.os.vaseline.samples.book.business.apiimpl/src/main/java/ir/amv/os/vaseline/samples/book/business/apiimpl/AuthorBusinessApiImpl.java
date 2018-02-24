@@ -3,6 +3,7 @@
  */
 package ir.amv.os.vaseline.samples.book.business.apiimpl;
 
+import ir.amv.os.vaseline.basics.apis.core.server.proxyaware.IProxyAware;
 import ir.amv.os.vaseline.business.apis.basic.layer.server.action.executor.IVaselineBusinessActionExecutor;
 import ir.amv.os.vaseline.business.apis.basic.layerimpl.server.crud.IBaseImplementedCrudApi;
 import ir.amv.os.vaseline.business.apis.simplesearch.layerimpl.server.IBaseImplementedSimpleSearchApi;
@@ -18,7 +19,10 @@ import org.osgi.service.component.annotations.Reference;
  */
 @Component(
         immediate = true,
-        service = IAuthorBusinessApi.class
+        service = {
+                IAuthorBusinessApi.class,
+                IProxyAware.class
+        }
 )
 public class AuthorBusinessApiImpl implements
         IAuthorBusinessApi,
@@ -27,17 +31,18 @@ public class AuthorBusinessApiImpl implements
 
     private IAuthorDao authorDao;
     private IVaselineBusinessActionExecutor businessActionExecutor;
+    private Object proxy;
 
     public IAuthorDao getDao() {
         return authorDao;
     }
 
     public <Proxy> Proxy getProxy(final Class<Proxy> proxyClass) {
-        return null;
+        return (Proxy) proxy;
     }
 
     public <Proxy> void setProxy(final Proxy proxy) {
-
+        this.proxy = proxy;
     }
 
     @Reference
