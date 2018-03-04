@@ -24,6 +24,11 @@
             <version>${vaseline.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.github.amirmv2006.security.authentication.apis</groupId>
+            <artifactId>vaseline-security-authentication-basic-api</artifactId>
+            <version>${vaseline.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.compendium</artifactId>
         </dependency>

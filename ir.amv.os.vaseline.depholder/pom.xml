@@ -107,6 +107,11 @@
             <artifactId>org.apache.felix.configadmin</artifactId>
             <version>1.8.14</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.amirmv2006.security.authorization.osgi</groupId>
+            <artifactId>vaseline-security-authorization-basic-osgi</artifactId>
+            <version>${vaseline.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
