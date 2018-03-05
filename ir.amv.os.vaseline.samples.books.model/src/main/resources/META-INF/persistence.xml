@@ -31,6 +31,9 @@
         <!-- Only used when transaction-type=RESOURCE_LOCAL -->
         <non-jta-data-source>osgi:service/javax.sql.DataSource/(osgi.jndi.service.name=jdbc/NoTxAmirDataSource)</non-jta-data-source>
         <class>ir.amv.os.vaseline.security.apis.authentication.modelimpl.server.base.VaselineBaseUserEntity</class>
+        <class>ir.amv.os.vaseline.security.apis.authorization.rbac.modelimpl.server.action.SecurityActionEntity</class>
+        <class>ir.amv.os.vaseline.security.apis.authorization.rbac.modelimpl.server.role.SecurityRoleEntity</class>
+        <class>ir.amv.os.vaseline.security.apis.authorization.rbac.modelimpl.server.user.SecurityUserEntity</class>
         <class>ir.amv.os.vaseline.samples.books.model.server.AuthorEntity</class>
         <class>ir.amv.os.vaseline.samples.books.model.server.BookEntity</class>
         <properties>
