@@ -23,6 +23,11 @@
             <artifactId>vaseline-business-simple-search-layer-api</artifactId>
             <version>${vaseline.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.amirmv2006.security.authorization.apis</groupId>
+            <artifactId>vaseline-security-authorization-basic-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

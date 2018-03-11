@@ -29,6 +29,16 @@
             <version>${vaseline.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.github.amirmv2006.security.authorization.osgi</groupId>
+            <artifactId>vaseline-security-authorization-rbac-auto-user-adder-osgi</artifactId>
+            <version>${vaseline.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.amirmv2006.security.authorization.osgi</groupId>
+            <artifactId>vaseline-security-authorization-rbac-auto-user-annot-osgi</artifactId>
+            <version>${vaseline.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.compendium</artifactId>
         </dependency>

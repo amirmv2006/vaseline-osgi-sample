@@ -47,19 +47,19 @@
         <feature>vaseline-security-audit-karaf-feature</feature>
         <feature>vaseline-service-karaf-feature</feature>
         <feature>vaseline-security-authentication-karaf-feature-jpa</feature>
-        <feature>vaseline-security-authorization-karaf-feature-api</feature>
+        <feature>vaseline-security-authorization-karaf-feature</feature>
         <feature>vaseline-ws-rest-karaf-feature</feature>
 
         <bundle>mvn:org.apache.geronimo.specs/geronimo-jpa_2.1_spec/1.0-alpha-1</bundle>
-        <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.books.model/${project.version}</bundle>
-        <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.books.dao.api/${project.version}</bundle>
-        <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.books.dao.jpa/${project.version}</bundle>
-        <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.business.api/${project.version}</bundle>
-        <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.business.apiimpl/${project.version}</bundle>
-        <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.service.api/${project.version}</bundle>
-        <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.service.apiimpl/${project.version}</bundle>
-        <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.rest/${project.version}</bundle>
-        <bundle>mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.restimpl/${project.version}</bundle>
+        <bundle start-level="59">mvn:${project.groupId}/ir.amv.os.vaseline.samples.books.model/${project.version}</bundle>
+        <bundle start-level="69">mvn:${project.groupId}/ir.amv.os.vaseline.samples.books.dao.api/${project.version}</bundle>
+        <bundle start-level="69">mvn:${project.groupId}/ir.amv.os.vaseline.samples.books.dao.jpa/${project.version}</bundle>
+        <bundle start-level="79">mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.business.api/${project.version}</bundle>
+        <bundle start-level="79">mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.business.apiimpl/${project.version}</bundle>
+        <bundle start-level="89">mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.service.api/${project.version}</bundle>
+        <bundle start-level="89">mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.service.apiimpl/${project.version}</bundle>
+        <bundle start-level="99">mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.rest/${project.version}</bundle>
+        <bundle start-level="99">mvn:${project.groupId}/ir.amv.os.vaseline.samples.book.restimpl/${project.version}</bundle>
 
     </feature>
 </features>
