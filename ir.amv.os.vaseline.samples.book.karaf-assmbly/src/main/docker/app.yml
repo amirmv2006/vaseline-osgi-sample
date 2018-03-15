@@ -1,0 +1,8 @@
+version: '2'
+services:
+    msaas-oauth-app:
+        image: vaseline-osgi-sample
+        environment:
+            - SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8181:8181
