@@ -56,6 +56,11 @@ public class BookRestServiceImpl
                 (PagingDto)objectMap.get("pagingDto"));
     }
 
+    @Override
+    public List<BookDto> testRolesAllowed() throws BaseVaselineClientException {
+        return getAll();
+    }
+
     @Reference
     public void setAuthenticationApi(final IAuthenticationApi authenticationApi) {
         this.authenticationApi = authenticationApi;

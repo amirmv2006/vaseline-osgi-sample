@@ -122,6 +122,11 @@
             <artifactId>vaseline-security-authorization-basic-layer-osgi</artifactId>
             <version>${vaseline.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.amirmv2006.ws.osgi</groupId>
+            <artifactId>vaseline-ws-rest-authorization-basic-osgi</artifactId>
+            <version>${vaseline.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

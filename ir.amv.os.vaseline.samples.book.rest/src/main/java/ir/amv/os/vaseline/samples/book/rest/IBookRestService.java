@@ -9,6 +9,8 @@ import ir.amv.os.vaseline.ws.rest.apis.basic.layer.crud.IBaseCrudRestService;
 import ir.amv.os.vaseline.ws.rest.apis.basic.layer.ro.IBaseReadOnlyRestService;
 import ir.amv.os.vaseline.ws.rest.apis.simplesearch.layer.IBaseSimpleSearchRestService;
 
+import javax.annotation.security.RolesAllowed;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -30,4 +32,11 @@ public interface IBookRestService extends
             @JsonParam(paramName = "example", paramType = BookDto.class),
             @JsonParam(paramName = "pagingDto", paramType = PagingDto.class)
     }) Map<String, Object> objectMap) throws BaseVaselineClientException;
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/securedWithAnnotation")
+    @RolesAllowed("book:read")
+    List<BookDto> testRolesAllowed() throws BaseVaselineClientException;
+
 }
